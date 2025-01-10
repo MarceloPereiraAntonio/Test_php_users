@@ -65,7 +65,7 @@ npm install
 npm run dev
 ```
 
-Obs: Foi criado um usuario default ao rodar as migration para ter mais facilidade na hora de testar 
+Obs: Foi criado um usuario default ao rodar as migration para ter mais facilidade na hora de testar,
 esses são os dados:
 Login:teste@testes.com
 Senha:12345678
