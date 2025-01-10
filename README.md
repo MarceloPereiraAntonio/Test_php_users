@@ -7,7 +7,7 @@ Clone Repositório
 git clone -b https://github.com/MarceloPereiraAntonio/Test_php_users
 ```
 ```sh
-cd app-laravel
+cd Test_php_users
 ```
 
 Crie o Arquivo .env
