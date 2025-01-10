@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title', config('app.name', 'Laravel'))</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -32,8 +32,8 @@
                     <!-- Left Side Of Navbar -->
                     @if (!auth()->guest())
                     <ul class="navbar-nav me-auto">
-                        <li><a class="nav-link" href="{{ route('category.index') }}">Categorias</a></li>
-                        <li><a class="nav-link" href="{{ route('product.index') }}">Produtos</a></li>
+                        <li><a class="nav-link" href="{{ route('user.create') }}">Novo usuário</a></li>
+                        <li><a class="nav-link" href="{{ route('user.index') }}">Lista de usuários</a></li>
 
                     </ul>
                     @endif
@@ -65,7 +65,6 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-                                    <a class="dropdown-item" href="{{ route('user.index') }}">Perfil</a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf

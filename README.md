@@ -1,24 +1,10 @@
-## Apresentação do Projeto
-Este projeto foi desenvolvido para oferecer uma solução robusta de gerenciamento de produtos, com uma arquitetura de código organizada e eficiente. Com o objetivo de implementar boas práticas de design de software, foram aplicados os patterns Service e Repository, proporcionando maior separação de responsabilidades e facilitando a manutenção e escalabilidade do sistema, além do uso de Jobs e Laravel Horizon para gerenciamento de filas.
-
 #### Funcionalidades Implementadas
-* CRUD completo de produtos, com validação de dados.
-
-* Criação, listagem e edição de Categorias, com validação de dados.
-
-* Filtros de busca para produtos, incluindo a possibilidade de filtrar produtos com ou sem imagem associada.
-
-* Importação de dados a partir de uma API externa, utilizando Jobs para processar as requisições em segundo plano.
-
-* Upload de imagens de produtos, com armazenamento seguro e exibição dinâmica no sistema.
-
-* Login e edição dos dados do usario.
-
+* CRUD completo de cadastro de usuarios, com validação dos dados ao cadastrar ou editar.
 
 ### Passo a passo para rodar esse projeto
 Clone Repositório
 ```sh
-git clone -b https://github.com/MarceloPereiraAntonio/teste-back-end
+git clone -b https://github.com/MarceloPereiraAntonio/Test_php_users
 ```
 ```sh
 cd app-laravel
@@ -33,7 +19,7 @@ Atualize essas variáveis de ambiente no seu arquivo .env
 ```dosini
 
 APP_NAME="New project"
-APP_URL=http://localhost:8000
+APP_URL=http://localhost:9000
 
 DB_CONNECTION=mysql
 DB_HOST=db
@@ -78,16 +64,11 @@ npm install
 npm install
 npm run dev
 ```
-Comandos de importação de dados da API fakestoreapi
-```sh
-php artisan categories:import Import all categories
-php artisan products:import {--id= : Import single product by ID}
-```
-Observação: Quando rodar os comandos acima será gerado um Job para cada um e para executar rode o seguinte comando:
 
-```sh
-php artisan horizon
-```
+Obs: Foi criado um usuario default ao rodar as migration para ter mais facilidade na hora de testar 
+esses são os dados:
+Login:teste@testes.com
+Senha:12345678
 
 Acesse o projeto
-[http://localhost:8000](http://localhost:8000)
+[http://localhost:9000](http://localhost:9000)
